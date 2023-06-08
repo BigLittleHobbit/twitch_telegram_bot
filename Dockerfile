@@ -14,4 +14,4 @@ WORKDIR /home/user
 
 COPY ./docker/reqs.txt /tmp/reqs.txt
 RUN python3 -m pip install --upgrade pip
-RUN pip install -r /tmp/dockerdir/reqs.txt
+RUN pip install -r /tmp/reqs.txt

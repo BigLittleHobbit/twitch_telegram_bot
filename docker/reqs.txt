@@ -1,0 +1,6 @@
+requests
+asyncio
+python_telegram_bot
+twitchAPI
+pyyaml
+
