@@ -25,8 +25,10 @@ async def get_sticker_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id,
     text="Сорян, я ничо не понял, спаситипамагити")
-    await context.bot.send_sticker(chat_id=update.effective_chat.id,
-    )
+    await asyncio.sleep(0.5)
+    await context.bot.send_sticker(sticker="CAACAgIAAxkBAAEJRlRkhK4xg_qndpad5ri5eD2vNfIxZQACZAADgGsjBl5YGFj3i6P1LwQ", 
+                                   chat_id=update.effective_chat.id)
+
 
 
 if __name__=="__main__":
