@@ -1,6 +1,6 @@
-requests
+requests=6.0
 asyncio
-python_telegram_bot
-twitchAPI
+python_telegram_bot=22.0
+twitchAPI=3.11.0
 pyyaml
 

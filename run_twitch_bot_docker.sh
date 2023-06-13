@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -it --name twitch_bot -v /Users/fedormesaninov/projs/twitch_telegram_bot:/home/user test_image:latest
+docker run -it --name twitch_bot -v $(pwd):/home/user twitch_telegram_bot:v0.2

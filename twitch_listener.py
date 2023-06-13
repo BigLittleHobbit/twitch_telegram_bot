@@ -5,11 +5,11 @@ from twitchAPI.oauth import UserAuthenticator
 from twitchAPI.types import AuthScope
 import asyncio
 
-TARGET_USERNAME = 'fedorsumkin'
+TARGET_USERNAME = 'BlackUFA'
 EVENTSUB_URL = 'https://localhost'
 APP_ID = 'f8s7cb4xx1pn6a0d3e399eiwpjuw93'
 APP_SECRET = '5fzrtd4u684i0k1hyjddm5r0o1sw7x'
-TARGET_SCOPES = [AuthScope.USER_READ_BROADCAST, AuthScope.MODERATOR_READ_FOLLOWERS]
+TARGET_SCOPES = [AuthScope.USER_READ_BROADCAST, AuthScope.USER_READ_FOLLOWS]
 
 async def on_follow(data: dict):
     print(data)
@@ -31,7 +31,6 @@ async def eventsub_example():
     event_sub.start()
 
     await event_sub.listen_stream_online(user.id, on_follow)
-
     try:
         input("press Enter to shut down twitch listener...")
     finally:
@@ -42,4 +41,4 @@ async def eventsub_example():
 
 if __name__=="__main__":
     # let's run our example
-    asyncio.get_running_loop(eventsub_example())
+    asyncio.run(eventsub_example())
